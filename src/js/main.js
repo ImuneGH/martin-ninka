@@ -4,12 +4,15 @@ function updateWeddingTimer() {
   const dateOfWedding = new Date("2026-10-03T14:00:00");
   const actualDate = new Date();
   const dateDifference = dateOfWedding - actualDate;
+  if (dateDifference < 0) {
+    return "";
+  }
   const dayDifference = Math.floor(dateDifference / (1000 * 60 * 60 * 24));
   const hourDifference = Math.floor((dateDifference / (1000 * 60 * 60)) % 24);
   const minuteDifference = Math.floor((dateDifference / (1000 * 60)) % 60);
   const secondsDifference = Math.floor((dateDifference / 1000) % 60);
   const [days, hours, minutes, seconds] = correctWordFormat(dayDifference, hourDifference, minuteDifference, secondsDifference);
-  const formattedRemainingTime = dayDifference + days + hourDifference + hours + minuteDifference + minutes + secondsDifference + seconds;
+  const formattedRemainingTime = dayDifference + days + hourDifference + hours + minuteDifference + minutes + " a " + secondsDifference + seconds;
   return formattedRemainingTime;
 }
 
@@ -24,8 +27,15 @@ function correctWordFormat(days, hours, minutes, seconds) {
 // main code
 
 const timerElement = document.querySelector(".timer");
+const stateElement = document.querySelector(".wedding-state");
 timerElement.textContent = "za " + updateWeddingTimer();
 
-setInterval(() => {
+const timerInterval = setInterval(() => {
   timerElement.textContent = "za " + updateWeddingTimer();
 }, 1000);
+
+if (updateWeddingTimer() === "") {
+  stateElement.textContent = "se vzali";
+  timerElement.textContent = "";
+  clearInterval(timerInterval);
+}
