@@ -17,9 +17,9 @@ function updateWeddingTimer() {
 
 function correctWordFormat(days, hours, minutes, seconds) {
   const formattedDays = days > 4 || days === 0 ? " dní " : days !== 1 ? " dny " : " den ";
-  const formattedHours = hours > 4 || hours === 0 ? " hodin " : hours !== 1 ? " hodiny " : " hodina ";
-  const formattedMinutes = minutes > 4 || minutes === 0 ? " minut " : minutes !== 1 ? " minuty " : " minuta ";
-  const formattedSeconds = seconds > 4 || seconds === 0 ? " sekund " : seconds !== 1 ? " sekundy " : " sekunda ";
+  const formattedHours = hours > 4 || hours === 0 ? " hodin " : hours !== 1 ? " hodiny " : " hodinu ";
+  const formattedMinutes = minutes > 4 || minutes === 0 ? " minut " : minutes !== 1 ? " minuty " : " minutu ";
+  const formattedSeconds = seconds > 4 || seconds === 0 ? " sekund " : seconds !== 1 ? " sekundy " : " sekundu ";
   return [formattedDays, formattedHours, formattedMinutes, formattedSeconds];
 }
 
