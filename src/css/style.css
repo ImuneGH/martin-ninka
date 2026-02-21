@@ -1,0 +1,28 @@
+/* hero section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.divider {
+  width: 9.375rem;
+  margin: 3.125rem 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.hero p {
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+.timer {
+  margin: 2rem 0;
+}

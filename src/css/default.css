@@ -41,4 +41,13 @@ body {
 
 h1 {
   font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+}
+
+section:nth-of-type(odd) {
+  background-color: var(--bg-color-white);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--bg-color-cream);
 }
