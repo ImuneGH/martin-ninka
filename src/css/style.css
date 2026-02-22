@@ -36,7 +36,17 @@
   margin: 2rem 0 1rem;
 }
 
+.location-img {
+  margin-top: 3rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px var(--accent-color-hover);
+}
+
+.location .divider {
+  width: 12rem;
+}
+
 .location iframe {
-  /* margin: 3rem 0; */
+  margin-bottom: 3rem;
   border: none;
 }
