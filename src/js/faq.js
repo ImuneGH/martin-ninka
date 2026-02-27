@@ -2,7 +2,7 @@
 
 function showAnswer(e) {
   const answer = e.target.nextSibling;
-  answer.style.display = "block";
+  answer.style.display === "block" ? (answer.style.display = "none") : (answer.style.display = "block");
 }
 
 // main code
