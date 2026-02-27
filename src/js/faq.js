@@ -1,15 +1,14 @@
 // functions
 
-function showAnswer() {
-  console.log("kliknul jsi");
+function showAnswer(e) {
+  const answer = e.target.nextSibling;
+  answer.style.display = "block";
 }
 
 // main code
 
 const questionElements = document.querySelectorAll(".question");
 const answerElements = document.querySelectorAll(".answer");
-
-// console.log(questionElements, answerElements);
 
 questionElements.forEach((question) => {
   question.addEventListener("click", showAnswer);
