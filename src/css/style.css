@@ -112,6 +112,18 @@
 
 /* share photo section */
 
+.share-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .qr-code {
-  max-width: 15rem;
+  max-width: 20rem;
+  margin-top: 2rem;
+}
+
+.instructions {
+  font-size: 1.5rem;
 }
