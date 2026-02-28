@@ -64,9 +64,13 @@ section {
 }
 
 section:nth-of-type(odd) {
-  background-color: var(--bg-color-white);
+  background: linear-gradient(to top, var(--bg-color-white) 99%, var(--bg-color-cream));
 }
 
 section:nth-of-type(even) {
-  background-color: var(--bg-color-cream);
+  background: linear-gradient(to top, var(--bg-color-cream) 99%, var(--bg-color-white));
+}
+
+section:first-of-type {
+  background: var(--bg-color-white);
 }
