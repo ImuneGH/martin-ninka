@@ -109,3 +109,9 @@
   padding: 1rem;
   margin-left: 1rem;
 }
+
+/* share photo section */
+
+.qr-code {
+  max-width: 15rem;
+}
