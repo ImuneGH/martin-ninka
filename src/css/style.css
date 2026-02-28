@@ -91,6 +91,10 @@
 }
 
 .question {
+  background-color: unset;
+  border: none;
+  color: inherit;
+  text-align: unset;
   cursor: pointer;
 }
 
