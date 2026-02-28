@@ -60,17 +60,13 @@ button {
 }
 
 section {
-  padding: 5rem 0;
-}
-
-section:nth-of-type(odd) {
-  background: linear-gradient(to top, var(--bg-color-white) 99%, var(--bg-color-cream));
+  padding: 6rem 0;
 }
 
 section:nth-of-type(even) {
-  background: linear-gradient(to top, var(--bg-color-cream) 99%, var(--bg-color-white));
+  background: linear-gradient(to top, var(--bg-color-white) 99%, var(--bg-color-cream));
 }
 
-section:first-of-type {
-  background: var(--bg-color-white);
+section:nth-of-type(odd) {
+  background: linear-gradient(to top, var(--bg-color-cream) 99%, var(--bg-color-white));
 }
