@@ -80,7 +80,7 @@
 }
 
 .faq-list {
-  /* max-width: 45rem; */
+  max-width: 45rem;
   padding: 0;
 }
 
@@ -97,6 +97,7 @@
   text-align: unset;
   cursor: pointer;
   margin-bottom: 0.5rem;
+  min-width: 45rem;
 }
 
 .question:focus-visible {
@@ -113,7 +114,6 @@
   height: 0px;
   opacity: 0;
   max-width: 39rem;
-  /* line-height: normal; */
   box-sizing: unset;
 }
 
