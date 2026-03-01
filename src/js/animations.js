@@ -4,11 +4,12 @@ import gsap from "gsap";
 
 function showAnswer(e) {
   const answer = e.target.nextElementSibling;
-  if (answer.classList.contains("display-none")) {
-    gsap.to(answer, { y: 0, opacity: 1, height: 70, duration: 0.5 });
-    answer.classList.remove("display-none");
+  if (!isOpen) {
+    isOpen = true;
+    gsap.to(answer, { opacity: 1, duration: 0.5, height: "auto", padding: 16, border: "1px solid var(--accent-color-hover)" });
   } else {
-    gsap.to(answer, { y: -30, opacity: 0, height: 0, duration: 0.5, onComplete: () => answer.classList.add("display-none") });
+    isOpen = false;
+    gsap.to(answer, { opacity: 0, height: 0, duration: 0.5, padding: 0, border: "0px solid var(--accent-color-hover)" });
   }
 }
 
@@ -16,6 +17,7 @@ function showAnswer(e) {
 
 // faq animations
 
+let isOpen = false;
 const questionElements = document.querySelectorAll(".question");
 
 questionElements.forEach((question) => {
