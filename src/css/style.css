@@ -91,6 +91,7 @@
 }
 
 .question {
+  position: relative;
   background-color: unset;
   border: none;
   color: inherit;
