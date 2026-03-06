@@ -92,13 +92,15 @@
 
 .question {
   position: relative;
+  padding-right: 3rem;
+  margin-bottom: 0.5rem;
+  min-width: 45rem;
+  text-align: unset;
+
   background-color: unset;
   border: none;
   color: inherit;
-  text-align: unset;
   cursor: pointer;
-  margin-bottom: 0.5rem;
-  min-width: 45rem;
 }
 
 .question:focus-visible {
