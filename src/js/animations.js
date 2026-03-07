@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // functions
 
@@ -20,11 +21,17 @@ function showAnswer(e) {
 
 // faq animations
 
+gsap.registerPlugin(ScrollTrigger);
+
 const questionElements = document.querySelectorAll(".question");
-const scrollAnimationElements = document.querySelectorAll(".scroll-animation");
+const scrollAnimationElements = gsap.utils.toArray(".scroll-animation");
 
 console.log(scrollAnimationElements);
 
 questionElements.forEach((question) => {
   question.addEventListener("click", showAnswer);
+});
+
+scrollAnimationElements.forEach((element) => {
+  gsap.from(element, { y: -50, duration: 1, scrollTrigger: { trigger: element, toggleActions: "play none none none" } });
 });
