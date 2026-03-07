@@ -33,5 +33,5 @@ questionElements.forEach((question) => {
 });
 
 scrollAnimationElements.forEach((element) => {
-  gsap.from(element, { y: -50, duration: 1, scrollTrigger: { trigger: element, toggleActions: "play none none none" } });
+  gsap.from(element, { y: -24, opacity: 0, duration: 1, scrollTrigger: { trigger: element, start: "top 70%", toggleActions: "play none none none" } });
 });
