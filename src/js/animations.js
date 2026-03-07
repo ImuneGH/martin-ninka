@@ -21,6 +21,9 @@ function showAnswer(e) {
 // faq animations
 
 const questionElements = document.querySelectorAll(".question");
+const scrollAnimationElements = document.querySelectorAll(".scroll-animation");
+
+console.log(scrollAnimationElements);
 
 questionElements.forEach((question) => {
   question.addEventListener("click", showAnswer);
