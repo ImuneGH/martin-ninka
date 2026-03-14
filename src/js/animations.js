@@ -26,6 +26,7 @@ gsap.registerPlugin(ScrollTrigger);
 const questionElements = document.querySelectorAll(".question");
 const scrollAnimationElements = gsap.utils.toArray(".animation-wrapper");
 const imgAnimation = document.querySelector(".img-animation");
+const tl = gsap.timeline({ delay: 0.3 });
 
 questionElements.forEach((question) => {
   question.addEventListener("click", showAnswer);
@@ -41,5 +42,14 @@ scrollAnimationElements.forEach((element) => {
 
 // hero animations
 
-gsap.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, delay: 0.3, ease: "power2.out" });
-gsap.from(".hero-animation", { y: 20, opacity: 0, duration: 1, delay: 0.5, stagger: 0.5, ease: "power2.out" });
+tl.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, ease: "power2.out" }).from(
+  ".hero-animation",
+  {
+    y: 20,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+  },
+  "-=1"
+);
