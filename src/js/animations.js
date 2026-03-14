@@ -38,3 +38,7 @@ gsap.from(imgAnimation, { scale: 0.95, opacity: 0, duration: 1, rotate: -0.6, sc
 scrollAnimationElements.forEach((element) => {
   gsap.from(element, { y: 24, opacity: 0, duration: 1, ease: "power2.out", stagger: 1.5, scrollTrigger: { trigger: element, start: "top 70%", toggleActions: "play none none none" } });
 });
+
+// hero animations
+
+gsap.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, delay: 0.3, ease: "power2.out" });

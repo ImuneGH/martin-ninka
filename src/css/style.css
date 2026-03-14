@@ -14,6 +14,11 @@
   min-height: 100vh;
 }
 
+.names span {
+  display: inline-block;
+  will-change: transform;
+}
+
 .divider {
   width: 9.375rem;
   margin: 3.125rem 0;
