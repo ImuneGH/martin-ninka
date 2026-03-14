@@ -24,14 +24,17 @@ function showAnswer(e) {
 gsap.registerPlugin(ScrollTrigger);
 
 const questionElements = document.querySelectorAll(".question");
-const scrollAnimationElements = gsap.utils.toArray(".scroll-animation");
-
-console.log(scrollAnimationElements);
+const scrollAnimationElements = gsap.utils.toArray(".animation-wrapper");
+const imgAnimation = document.querySelector(".img-animation");
 
 questionElements.forEach((question) => {
   question.addEventListener("click", showAnswer);
 });
 
+// scroll animations
+
+gsap.from(imgAnimation, { scale: 0.95, opacity: 0, duration: 1, rotate: -0.6, scrollTrigger: { trigger: imgAnimation, start: "top 70%", toggleActions: "play none none none" } });
+
 scrollAnimationElements.forEach((element) => {
-  gsap.from(element, { y: -24, opacity: 0, duration: 1, scrollTrigger: { trigger: element, start: "top 70%", toggleActions: "play none none none" } });
+  gsap.from(element, { y: 24, opacity: 0, duration: 1, ease: "power2.out", stagger: 1.5, scrollTrigger: { trigger: element, start: "top 70%", toggleActions: "play none none none" } });
 });
