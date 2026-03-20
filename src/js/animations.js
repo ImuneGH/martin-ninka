@@ -10,10 +10,10 @@ function showAnswer(e) {
   answer.classList.toggle("is-open");
   if (!isOpen) {
     gsap.to(answer, { opacity: 1, duration: 0.3, height: "auto", padding: 16, border: "1px solid var(--accent-color-hover)" });
-    gsap.to(arrow, { rotate: 135, duration: 0.3 });
+    gsap.to(arrow, { rotate: 135, duration: 0.3, y: 10 });
   } else {
     gsap.to(answer, { opacity: 0, height: 0, duration: 0.3, paddingBottom: 0, paddingTop: 0, border: "0px solid var(--accent-color-hover)" });
-    gsap.to(arrow, { rotate: -45, duration: 0.3 });
+    gsap.to(arrow, { rotate: -45, duration: 0.3, y: 0 });
   }
 }
 

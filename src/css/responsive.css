@@ -3,4 +3,14 @@
     width: 80vw;
     height: 300px;
   }
+
+  .arrow {
+    top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .arrow {
+    top: 0.3rem;
+  }
 }
