@@ -2,6 +2,10 @@
   display: none;
 }
 
+.animation-wrapper {
+  padding: 0 2rem;
+}
+
 /* hero section */
 
 .hero {
@@ -12,6 +16,7 @@
 
   width: 100%;
   min-height: 100vh;
+  padding: 0 2rem;
 }
 
 .names span {
@@ -29,6 +34,7 @@
 
 .timer {
   margin: 2rem 0;
+  text-align: center;
 }
 
 /* location section */
@@ -66,6 +72,7 @@
 
 .schedule-list {
   list-style-type: none;
+  padding: 0;
 }
 
 .schedule-item {
