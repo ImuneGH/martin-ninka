@@ -24,7 +24,7 @@ function showAnswer(e) {
 gsap.registerPlugin(ScrollTrigger);
 
 const questionElements = document.querySelectorAll(".question");
-const scrollAnimationElements = gsap.utils.toArray(".animation-wrapper");
+const scrollAnimationElements = gsap.utils.toArray(".wrapper");
 const imgAnimation = document.querySelector(".img-animation");
 const tl = gsap.timeline({ delay: 0.3 });
 
