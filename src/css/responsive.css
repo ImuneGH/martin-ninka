@@ -13,4 +13,8 @@
   .arrow {
     top: 0.3rem;
   }
+
+  .schedule-item span {
+    margin-left: 1.5rem;
+  }
 }

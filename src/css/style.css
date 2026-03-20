@@ -47,6 +47,10 @@
   gap: 1rem;
 }
 
+.location p {
+  text-align: center;
+}
+
 .location-img {
   margin-top: 3rem;
   border-radius: 10px;
@@ -142,6 +146,10 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+
+.share-photo p {
+  text-align: center;
 }
 
 .qr-code {
