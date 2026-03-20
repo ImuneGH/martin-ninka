@@ -10,3 +10,4 @@ Simple wedding website that provides useful information about upcoming wedding s
 - JavaScript
 - CSS
 - HTML
+- gsap library
