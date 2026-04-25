@@ -143,6 +143,30 @@
   color: var(--font-color);
 }
 
+.color-swatch-brick-red,
+.color-swatch-burgundy {
+  display: inline-block;
+  width: 2rem;
+  min-height: 2rem;
+  border-radius: 5px;
+  vertical-align: -5px;
+}
+
+.color-swatch-brick-red {
+  background-color: #c4622d;
+}
+
+.color-swatch-burgundy {
+  background-color: #800020;
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 1.5rem;
+  min-height: 1.5rem;
+  background-color: #800020;
+}
+
 /* share photo section */
 
 .share-photo {
