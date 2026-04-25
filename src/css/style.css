@@ -126,7 +126,7 @@
 }
 
 .answer {
-  font-size: clamp(1.2rem, 5vw, 2rem);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   border: 1px solid var(--accent-color-hover);
   border-radius: 5px;
   padding: 0px 16px;
