@@ -139,6 +139,10 @@
   box-sizing: unset;
 }
 
+.answer a:visited {
+  color: var(--font-color);
+}
+
 /* share photo section */
 
 .share-photo {
