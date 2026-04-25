@@ -17,4 +17,8 @@
   .schedule-item span {
     margin-left: 1.5rem;
   }
+
+  .qr-code {
+    max-width: 15rem
+  }
 }
