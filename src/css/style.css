@@ -37,6 +37,16 @@
   text-align: center;
 }
 
+.attendance-confirmation {
+  text-decoration: underline;
+  color: var(--font-color);
+}
+
+.attendance-confirmation:visited {
+  color: var(--font-color);
+  text-decoration: underline;
+}
+
 /* location section */
 
 .location {
