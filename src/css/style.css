@@ -149,6 +149,7 @@
   box-sizing: unset;
 }
 
+.answer a,
 .answer a:visited {
   color: var(--font-color);
 }
