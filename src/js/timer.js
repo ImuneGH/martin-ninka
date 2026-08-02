@@ -19,7 +19,8 @@ function correctWordFormat(days, hours, minutes, seconds) {
   const formattedDays = days > 4 || days === 0 ? " dní " : days !== 1 ? " dny " : " den ";
   const formattedHours = hours > 4 || hours === 0 ? " hodin " : hours !== 1 ? " hodiny " : " hodinu ";
   const formattedMinutes = minutes > 4 || minutes === 0 ? " minut " : minutes !== 1 ? " minuty " : " minutu ";
-  const formattedSeconds = seconds > 4 || seconds === 0 ? " sekund " : seconds !== 1 ? " sekundy " : " sekundu ";
+  const formattedSeconds =
+    seconds > 4 || seconds === 0 ? " <span class='seconds'>sekund</span> " : seconds !== 1 ? " <span class='seconds'>sekundy</span> " : " <span class='seconds'>sekundu</span> ";
   return [formattedDays, formattedHours, formattedMinutes, formattedSeconds];
 }
 
@@ -29,7 +30,7 @@ function timerStatusSetting() {
     timerElement.textContent = "";
     clearInterval(timerInterval);
   } else {
-    timerElement.textContent = "za " + updateWeddingTimer();
+    timerElement.innerHTML = "za " + updateWeddingTimer();
     if (stateElement.textContent === "") {
       stateElement.textContent = "se berou";
     }
