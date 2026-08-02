@@ -35,6 +35,8 @@
 .timer {
   margin: 2rem 0;
   text-align: center;
+
+  font-variant-numeric: tabular-nums;
 }
 
 .attendance-confirmation {
