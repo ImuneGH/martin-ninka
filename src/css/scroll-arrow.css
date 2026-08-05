@@ -1,6 +1,6 @@
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -14,7 +14,7 @@
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #3c3489;
+  color: var(--font-color);
 }
 
 .scroll-indicator__arrow {
@@ -29,7 +29,7 @@
   top: 0;
   width: 12px;
   height: 2px;
-  background: #3c3489;
+  background: var(--font-color);
   border-radius: 1px;
 }
 
