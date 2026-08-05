@@ -1,0 +1,46 @@
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.scroll-indicator__text {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3c3489;
+}
+
+.scroll-indicator__arrow {
+  position: relative;
+  width: 17px;
+  height: 9px;
+  display: block;
+}
+
+.scroll-indicator__arrow-line {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 2px;
+  background: #3c3489;
+  border-radius: 1px;
+}
+
+.scroll-indicator__arrow-line--left {
+  left: 1px;
+  transform-origin: left top;
+  transform: rotate(45deg);
+}
+
+.scroll-indicator__arrow-line--right {
+  right: 1px;
+  transform-origin: right top;
+  transform: rotate(-45deg);
+}
