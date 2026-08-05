@@ -58,4 +58,8 @@ tl.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, 
 
 const scrollArrow = document.querySelector(".scroll-indicator");
 
-gsap.to(scrollArrow, { opacity: 0, duration: 1.2, repeat: -1, yoyo: true, ease: "power2.in" });
+gsap.delayedCall(3, scrollArrowAnimation);
+
+function scrollArrowAnimation() {
+  gsap.to(scrollArrow, { opacity: 0, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.in" });
+}
