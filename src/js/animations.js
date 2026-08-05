@@ -61,5 +61,5 @@ const scrollArrow = document.querySelector(".scroll-indicator");
 gsap.delayedCall(3, scrollArrowAnimation);
 
 function scrollArrowAnimation() {
-  gsap.to(scrollArrow, { opacity: 0, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.in" });
+  gsap.to(scrollArrow, { opacity: 1, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.out" });
 }
