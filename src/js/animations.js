@@ -69,7 +69,7 @@ function scrollIndicatorAnimation() {
     yoyo: true,
     display: "flex",
     ease: "power2.out",
-    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation },
+    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, start: "top bottom", end: "bottom 90%" },
   });
 }
 
