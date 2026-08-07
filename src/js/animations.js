@@ -58,20 +58,25 @@ tl.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, 
 
 const scrollIndicator = document.querySelector(".scroll-indicator");
 const heroSection = document.querySelector(".hero");
-
 const delayedCall = gsap.delayedCall(5, scrollIndicatorAnimation);
 const tlScrollIndicator = gsap.timeline();
 
+ScrollTrigger.create({
+  trigger: heroSection,
+  start: "top top",
+  onLeave: stopScrollIndicatorAnimation,
+  end: "bottom 90%",
+});
+
 function scrollIndicatorAnimation() {
-  tlScrollIndicator.set(scrollIndicator, { opacity: 1, duration: 1 }).to(scrollIndicator, {
+  tlScrollIndicator.to(scrollIndicator, { opacity: 1, duration: 1 }).to(scrollIndicator, {
     opacity: 0.8,
     y: 5,
     duration: 1,
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut",
-    repeatDelay: 1.5,
-    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, end: "bottom 90%" },
+    repeatDelay: 1,
   });
 }
 
