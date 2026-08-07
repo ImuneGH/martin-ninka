@@ -67,7 +67,7 @@ function scrollIndicatorAnimation() {
     duration: 1,
     repeat: -1,
     yoyo: true,
-    display: "flex",
+    // display: "flex",
     ease: "power2.out",
     scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, start: "top bottom", end: "bottom 90%" },
   });
