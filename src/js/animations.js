@@ -67,7 +67,6 @@ function scrollIndicatorAnimation() {
     duration: 1,
     repeat: -1,
     yoyo: true,
-    // display: "flex",
     ease: "power2.out",
     scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, start: "top bottom", end: "bottom 90%" },
   });
@@ -77,5 +76,4 @@ function stopScrollIndicatorAnimation() {
   delayedCall.kill();
   gsap.killTweensOf(scrollIndicator);
   gsap.to(scrollIndicator, { opacity: 0, duration: 1 });
-  console.log("leavuju");
 }
