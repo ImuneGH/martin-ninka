@@ -56,10 +56,10 @@ tl.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, 
 
 // scroll arrow animation
 
-const scrollArrow = document.querySelector(".scroll-indicator");
+const scrollIndicator = document.querySelector(".scroll-indicator");
 
-gsap.delayedCall(5, scrollArrowAnimation);
+gsap.delayedCall(5, scrollIndicatorAnimation);
 
-function scrollArrowAnimation() {
-  gsap.to(scrollArrow, { opacity: 1, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.out" });
+function scrollIndicatorAnimation() {
+  gsap.to(scrollIndicator, { opacity: 1, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.out" });
 }
