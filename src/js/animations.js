@@ -60,20 +60,23 @@ const scrollIndicator = document.querySelector(".scroll-indicator");
 const heroSection = document.querySelector(".hero");
 
 const delayedCall = gsap.delayedCall(5, scrollIndicatorAnimation);
+const tlScrollIndicator = gsap.timeline();
 
 function scrollIndicatorAnimation() {
-  gsap.to(scrollIndicator, {
-    opacity: 1,
+  tlScrollIndicator.set(scrollIndicator, { opacity: 1, duration: 1 }).to(scrollIndicator, {
+    opacity: 0.8,
+    y: 5,
     duration: 1,
     repeat: -1,
     yoyo: true,
-    ease: "power2.out",
-    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, start: "top bottom", end: "bottom 90%" },
+    ease: "sine.inOut",
+    repeatDelay: 1.5,
+    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation, end: "bottom 90%" },
   });
 }
 
 function stopScrollIndicatorAnimation() {
   delayedCall.kill();
-  gsap.killTweensOf(scrollIndicator);
+  tlScrollIndicator.kill();
   gsap.to(scrollIndicator, { opacity: 0, duration: 1 });
 }
