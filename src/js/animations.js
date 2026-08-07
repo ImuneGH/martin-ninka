@@ -57,9 +57,25 @@ tl.from(".names span", { yPercent: 100, opacity: 0, stagger: 0.08, duration: 1, 
 // scroll arrow animation
 
 const scrollIndicator = document.querySelector(".scroll-indicator");
+const heroSection = document.querySelector(".hero");
 
-gsap.delayedCall(5, scrollIndicatorAnimation);
+const delayedCall = gsap.delayedCall(5, scrollIndicatorAnimation);
 
 function scrollIndicatorAnimation() {
-  gsap.to(scrollIndicator, { opacity: 1, duration: 1, repeat: -1, yoyo: true, display: "flex", ease: "power2.out" });
+  gsap.to(scrollIndicator, {
+    opacity: 1,
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
+    display: "flex",
+    ease: "power2.out",
+    scrollTrigger: { trigger: heroSection, onLeave: stopScrollIndicatorAnimation },
+  });
+}
+
+function stopScrollIndicatorAnimation() {
+  delayedCall.kill();
+  gsap.killTweensOf(scrollIndicator);
+  gsap.to(scrollIndicator, { opacity: 0, duration: 1 });
+  console.log("leavuju");
 }
