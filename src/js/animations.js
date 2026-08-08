@@ -17,6 +17,24 @@ function showAnswer(e) {
   }
 }
 
+function scrollIndicatorAnimation() {
+  tlScrollIndicator.to(scrollIndicator, { opacity: 1, duration: 1 }).to(scrollIndicator, {
+    opacity: 0.8,
+    y: 6,
+    duration: 0.8,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    repeatDelay: 0.8,
+  });
+}
+
+function stopScrollIndicatorAnimation() {
+  delayedCall.kill();
+  tlScrollIndicator.kill();
+  gsap.to(scrollIndicator, { opacity: 0, duration: 1 });
+}
+
 // main code
 
 // faq animations
@@ -67,21 +85,3 @@ ScrollTrigger.create({
   onLeave: stopScrollIndicatorAnimation,
   end: "bottom 90%",
 });
-
-function scrollIndicatorAnimation() {
-  tlScrollIndicator.to(scrollIndicator, { opacity: 1, duration: 1 }).to(scrollIndicator, {
-    opacity: 0.8,
-    y: 5,
-    duration: 1,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-    repeatDelay: 1,
-  });
-}
-
-function stopScrollIndicatorAnimation() {
-  delayedCall.kill();
-  tlScrollIndicator.kill();
-  gsap.to(scrollIndicator, { opacity: 0, duration: 1 });
-}
