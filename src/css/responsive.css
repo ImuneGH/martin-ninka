@@ -19,6 +19,10 @@
   }
 
   .qr-code {
-    max-width: 15rem
+    max-width: 15rem;
+  }
+
+  .hero {
+    margin-top: -1rem;
   }
 }
